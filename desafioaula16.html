@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalhoGrupoAula16</title>
+</head>
+<body>
+    <script>
+        var names = ['Olá','Salve', 'galera','tudo','bem?', 'Uau!']
+
+        function mostraSequencia (names){
+
+            var i = 0;
+
+            while(i< names.length) {
+                var name = names[i];
+
+                document.write(`<button onclick = "alert ('`+ name+`')">`+ name + `</button>`);
+
+                i++
+            }
+        
+        }
+
+        mostraSequencia (names);
+
+    </script>
+    
+</body>
+</html>

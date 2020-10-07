@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeAula18</title>
+</head>
+<body>
+    
+    <script>
+        var array1 = [1, 2, 3];
+        var array2 = [4, 4, 4];
+
+        function somaArrays(arr1, arr2) {
+            var soma = 0;
+            var soma2 = 0;
+            for( i = 0; i < arr1.length; i ++) {
+                var numeros1 = arr1[i];
+                soma = soma + numeros1
+
+            }
+            for (i = 0; i < arr2.length; i ++) {
+                var numeros2 = arr2[i];
+                soma2 = soma2 + numeros2
+
+            }
+            return soma + soma2
+
+        }
+        document.write(somaArrays(array1,array2))
+    </script>
+</body>
+</html>
