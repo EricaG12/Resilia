@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laranja_pizzaria</title>
+</head>
+<body>
+    <h1> Divisão de Laranjas</h1>
+
+    <script>
+
+        function mostra(frase){
+            document.write(frase)
+        }
+
+        function pulaLinha(){
+            document.write("<br><br>")
+        }
+
+        function dividiLaranja(qtdLaranjas,qtdVizinhos){
+
+            var resultado_divisao = Math.trunc(qtdLaranjas/qtdVizinhos);
+            var resto = qtdLaranjas%qtdVizinhos;
+
+            mostra("Joselito dará " + resultado_divisao + " laranjas para cada vizinho e ficará com " + resto + " laranjas.")
+
+            return
+        }
+        dividiLaranja(50,3)
+
+    </script>
+
+    <h1>Pizzaria</h1>
+
+    <script>
+        function mostra(frase) {
+            document.write(frase)
+        }
+        function pulaLinha() {
+            document.write("<br><br>")
+        }
+
+        function calculaImposto(produto,custo,venda) {
+            var imposto = (venda*8.9)/100;
+            var lucro = venda-custo;
+
+            mostra("Para a pizza " + produto + " o lucro liquido é de R$"+lucro.toFixed(2)+" e o imposto é de R$"+imposto.toFixed(2))
+
+        }
+        calculaImposto("Frango com Catupiry", 25, 34.99)
+
+    </script>
+   
+</body>
+
+</html>

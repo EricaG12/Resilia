@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Cantareira's Bar</title>
+</head>
+<body>
+    <script>
+        function menuBebidas(prod1,prod2,prod3)
+        {
+            document.write("<h3>Cantareira's Bar</h3><br> Menu de Bebidas<br>1- " + prod1 + "<br>2- " + prod2 + "<br>3- " + prod3)
+        }
+        function escolhaCliente(prod1,prod2,prod3)
+        {
+            var tipoBebida=prompt("Menu de Bebidas\n1- " + prod1 + "\n2- " + prod2 + "\n3- " + prod3 + "\nDigite o codigo da bebida que você deseja escolher?")
+            if (tipoBebida==1)
+            {
+                return document.write("<br> O tipo de bebida escolhida é " + prod1)
+            }
+            if (tipoBebida==2)
+            {
+                return document.write("<br> O tipo de bebida escolhida é " + prod2)
+            }
+            if (tipoBebida==3)
+            {
+                return document.write("<br> O tipo de bebida escolhida é " + prod3)
+            }
+            else
+            {
+                return document.write("<br><br>Opção inválida")
+            }
+        }
+        menuBebidas("Refrigerante","Suco","Água")
+        escolhaCliente("Refrigerante","Suco","Água")
+    </script>
+    
+</body>
+</html>

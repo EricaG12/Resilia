@@ -1,0 +1,85 @@
+#container {
+width: 100%;
+}
+/*body*/
+body {
+    background-color: yellow;
+}
+
+header {
+display: flex;
+font-size: 18px;
+background-color:black;
+height: 100px;
+padding: 10px;
+box-sizing: border-box;
+justify-content: space-around;
+align-items:center;
+}
+
+nav a {
+text-decoration: none;
+color:black;
+font-size: 20px;
+margin-left: 20px;
+border: 1px solid yellow;
+background-color:yellow;
+padding: 5px;
+border-radius: 5px;
+font-weight: bold;
+}
+
+header a:hover {
+    text-decoration:underline;
+}
+
+.cabecalhoprincipal {
+display: inline-block;
+text-align: center;
+width: 100%;
+vertical-align: center;
+font-size: 26px;
+font-weight: bold;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+padding: 45px;
+}
+
+.cabecalho {
+display: inline;
+flex-flow: column;
+margin: 0% 450px;
+padding: 10px 25px;
+width: 30%;
+border-color: black;
+border-top: black;
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+}
+
+.envio {
+width: 20%;
+padding: 20px 0;
+margin: 10% 375px;
+margin-left: 450px;;
+background:black;
+color: grey;
+font-weight: bold;
+font-size: 18px;
+border: none;
+border-radius: 6px;
+transition: 1s all;
+cursor: pointer;
+}
+
+footer {
+text-align: center;
+background: black;
+padding: 45px 0;
+margin: auto;
+}
+
+.copyrigth {
+color: white;
+font-size: 15px;
+}

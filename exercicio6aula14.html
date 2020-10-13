@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semaforo</title>
+</head>
+<body>
+    <script>
+        function acendeSemaforo(luz)
+        {
+            if (luz=="verde")
+            {
+                return document.write("Pode passar!<br>")
+            }
+            if (luz=="amarelo")
+            {
+                return document.write("Melhor freiar!<br>")
+            }
+            if (luz=="vermelho")
+            {
+                return document.write("Pare já!<br>")
+            }
+        }
+
+        acendeSemaforo("verde")
+        acendeSemaforo("amarelo")
+        acendeSemaforo("vermelho")
+    </script>
+    
+</body>
+</html>

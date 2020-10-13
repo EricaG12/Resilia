@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O motorista</title>
+</head>
+<body>
+    <script>
+        function habilitacao(idadeDoUsuario,idadePermitida)
+        {
+            if (idadeDoUsuario>=idadePermitida)
+            {
+                return document.write("Você pode dirigir<br>")
+            }
+            else
+            {
+                return document.write("Voce não pode dirigir<br>")
+            }
+        }
+        habilitacao(16,18)
+        habilitacao(24,18)
+    </script>
+    
+</body>
+</html>
