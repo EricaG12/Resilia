@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CifradeCezar</title>
+</head>
+<body>
+
+    <D>Digite seu nome aqui.</D><br><br>
+    <input id='input' type="text">
+    <button id='enviar'>Enviar</button><br><br>
+    <div id='resultado'>Resultado</div>
+
+    <script>
+        //criar uma mensagem codificada
+        //criar uma variavel que recebe uma *lista de informaçoes*
+        // alterar a informação inicial (deslocamento)
+        //mostrar a informação codificada
+        // traduzir a informação alterada
+        //mostrar a informação alterada
+
+        var nome1 = document.querySelector('#input')
+        var botao = document.querySelector('#enviar')
+        var i = 1;
+
+        botao.addEventListener('click', function(){
+            resultado.innerHTML = nome1.value
+        })
+
+        function cifraComCifradeCezar(deslocamento,nome1){
+            var letraArr = [];
+            var codigoArr = [];
+            var cifraArr = [];
+            var deslocamentoArr = [];
+
+            for(i = 0; i < nome1.length; i++)
+            {
+                var letra = nome1[i]
+                letraArr.push(letra)
+                var codigo = letra.charCodeAt(letra)
+                codigoArr.push(codigo)
+                var deslocamento = codigo + 1
+                if(deslocamento >= 90){
+                    deslocamento = (deslocamento -= 26)
+                }
+                deslocamentoArr.push(deslocamento)
+                var cifra = String.fromCharCode(deslocamento)
+                cifraArr.push(cifra)
+                return `${letra}=${codigo}+${deslocamento}=${cifra}`
+
+            }
+        }
+
+        document.write(cifraComCifradeCezar(i,nome1))
+        document.write("<br>",nome1)
+        console.log(cifraComCifradeCezar())
+    </script>
+
+</body>
+</html>

@@ -45,7 +45,7 @@ padding: 45px;
 }
 
 .cabecalho {
-display: inline;
+display: inline-block;
 flex-flow: column;
 margin: 0% 450px;
 padding: 10px 25px;

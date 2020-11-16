@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade_cria_botao</title>
+</head>
+<body>
+    <script>
+
+        var normal = "Salve"
+        var emCima = "(Salve)"
+        var clicando = "!Salve!"
+
+        var h1 = document.createElement("h1");
+        h1.textContent = "Salve";
+        document.body.appendChild(h1);
+
+        h1.addEventListener("mouseover", function() {
+            h1.textContent = emCima;
+
+        })
+
+        h1.addEventListener("mouseout", function() {
+            h1.textContent = normal;
+
+        })
+
+        h1.addEventListener("mousedown", function() {
+            h1.textContent = clicando;
+            h1.preventDefault();
+
+        })
+
+        h1.addEventListener("mouseup", function() {
+            h1.textContent = emCima;
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo entrega</title>
+</head>
+<body>
+    <p>Digite seu nome:</p>
+    <input type="text" id='input'>
+    <input type="button" value="enviar" id="botaoEnviar">
+    <div id='resultado'>Resultado</div>
+
+    <p id="pergunta">Você gosta de programar?</p>
+    <div id= 'botoesSimNao'>
+    <button id='botaoSim'>Sim</button>
+    <button id='botaoNao'>Não</button>
+    </div>
+
+    <script>
+        let campoInput = document.querySelector('#input');
+        let resultado = document.querySelector('#resultado');
+        let botaoEnviar = document.querySelector('#botaoEnviar');
+        let botoesSimNao = document.querySelector('#botoesSimNao')
+        //colocando o botao enviar pra fazer uma função.
+        botaoEnviar.addEventListener('click',function(){
+            resultado.innerHTML = campoInput.value
+       
+        });
+
+        let botaoSim = document.querySelector('#botaoSim');
+        let botaoNao = document.querySelector('#botaoNao');
+
+        let pergunta = document.querySelector('#pergunta')
+
+        botaoSim.onclick = function(){
+        pergunta.innerHTML='JavaScript é uma linguagem de programação?'
+        botaoSim.onclick=recebeSim
+        botaoNao.onclick=recebeNao 
+        }
+
+        botaoNao.onclick = function(){
+        pergunta.innerHTML='Ah, que pena que você não gosta de sofrer com códigos :('
+            botoesSimNao.innerHTML='Bye'
+        }
+        function recebeSim(){
+           pergunta.innerHTML='Parabéns, você ganhou!'
+           botoesSimNao.innerHTML=''
+        }
+        function recebeNao (){
+            pergunta.innerHTML='O jogo acabou ;)'
+            botoesSimNao.innerHTML=''
+        }
+        
+    </script>   
+</body>
+</html>

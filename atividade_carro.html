@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade_carro</title>
+</head>
+<body>
+    <script>
+        let carro = {
+            tanque: 40,
+            gasolina: 40,
+
+            acelerar: function (){
+                let acelerar = 5;
+                let oQueEuTenho = this.gasolina;
+
+                let novoValor = oQueEuTenho - acelerar;
+                this.gasolina = novoValor
+
+                return 'Tenho ' + novoValor + ' de gasolina no meu tanque.'
+
+            },
+
+            abastecer: function (){
+                let abastecer = 10;
+                let oQueTenhoAgora = this.gasolina;
+
+                let novoValorAbastecido = oQueTenhoAgora + abastecer;
+                this.gasolina = novoValorAbastecido
+                return 'Tenho agora ' + novoValorAbastecido + ' litros de gasolina no meu tanque.'
+            }
+
+        }
+
+        console.log(carro.abastecer())
+
+    </script>
+    
+</body>
+</html>
