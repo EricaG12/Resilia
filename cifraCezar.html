@@ -8,53 +8,69 @@
 <body>
 
     <D>Digite seu nome aqui.</D><br><br>
-    <input id='input' type="text">
-    <button id='enviar'>Enviar</button><br><br>
+    <input id='input' type="text"><br><br>
+    <button id='encripta'>Encripta</button><br><br>
+    <button id='desencripta'>Desencripta</button><br><br>
     <div id='resultado'>Resultado</div>
 
     <script>
         //criar uma mensagem codificada
-        //criar uma variavel que recebe uma *lista de informaçoes*
+        //criar uma variavel que recebe uma lista de informaçoes
         // alterar a informação inicial (deslocamento)
         //mostrar a informação codificada
         // traduzir a informação alterada
         //mostrar a informação alterada
 
         var nome1 = document.querySelector('#input')
-        var botao = document.querySelector('#enviar')
+        var botao = document.querySelector('#encripta')
+        var botao2 = document.querySelector("#desencripta")
         var i = 1;
+        var cifraArr = [];
 
-        botao.addEventListener('click', function(){
-            resultado.innerHTML = nome1.value
-        })
+        botao.addEventListener("click", function (){
+          let resultado = document.querySelector("#resultado").innerHTML = (cifraComCifradeCezar(i,nome1.value))
+          cifraArr = [];
+        });
+
+        botao2.addEventListener("click", function (){
+          let resultado = document.querySelector("#resultado").innerHTML = (desencriptaCezar(i,nome1.value))
+          cifraArr = [];
+        });
 
         function cifraComCifradeCezar(deslocamento,nome1){
-            var letraArr = [];
-            var codigoArr = [];
-            var cifraArr = [];
-            var deslocamentoArr = [];
-
+            var letraAuxiliar = "";
+            console.log(nome1)
             for(i = 0; i < nome1.length; i++)
             {
-                var letra = nome1[i]
-                letraArr.push(letra)
-                var codigo = letra.charCodeAt(letra)
-                codigoArr.push(codigo)
-                var deslocamento = codigo + 1
-                if(deslocamento >= 90){
-                    deslocamento = (deslocamento -= 26)
+                if (deslocamento >= 26) {
+                  deslocamento = deslocamento%26;
                 }
-                deslocamentoArr.push(deslocamento)
-                var cifra = String.fromCharCode(deslocamento)
-                cifraArr.push(cifra)
-                return `${letra}=${codigo}+${deslocamento}=${cifra}`
-
+                letraAuxiliar = nome1[i].charCodeAt() + deslocamento;
+                if (letraAuxiliar >= 90) {
+                  letraAuxiliar = letraAuxiliar - 26;
+                }
+                cifraArr.push(String.fromCharCode(letraAuxiliar));
             }
+            return cifraArr.join("");
         }
 
-        document.write(cifraComCifradeCezar(i,nome1))
-        document.write("<br>",nome1)
-        console.log(cifraComCifradeCezar())
+        
+        function desencriptaCezar(deslocamento,nome1) {
+          var letraAuxiliar = "";
+            console.log(nome1)
+            for(i = 0; i < nome1.length; i++)
+            {
+                if (deslocamento > 26) {
+                  deslocamento = 26;
+                }
+                letraAuxiliar = nome1[i].charCodeAt() - deslocamento;
+                if (letraAuxiliar < 65) {
+                  letraAuxiliar = letraAuxiliar + 26;
+                }
+                cifraArr.push(String.fromCharCode(letraAuxiliar));
+            }
+            return cifraArr.join("");
+        }
     </script>
 
 </body>
